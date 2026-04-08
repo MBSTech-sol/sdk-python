@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mbs-python"
+version = "0.2.4"
+description = "Official Python SDK for MBS Workbench — OpenAI-compatible local AI inference"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "MBS Tech Solutions" }]
+requires-python = ">=3.9"
+keywords = ["llm", "ai", "local-ai", "openai-compatible", "mbs-workbench", "gguf", "llama"]
+dependencies = [
+    "httpx>=0.25.0",
+    "httpx-sse>=0.4.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+numpy = ["numpy>=1.24.0"]
+pandas = ["pandas>=2.0.0", "numpy>=1.24.0"]
+all = ["numpy>=1.24.0", "pandas>=2.0.0"]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-httpx>=0.30.0",
+    "mypy>=1.0.0",
+    "ruff>=0.2.0",
+]
+
+[project.urls]
+Repository = "https://github.com/MBSTech-sol/sdk-python"
+Homepage = "https://mbsworkbench.com"
+Documentation = "https://github.com/MBSTech-sol/docs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mbs"]
+
+[tool.mypy]
+strict = true
+python_version = "3.9"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
