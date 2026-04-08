@@ -30,7 +30,7 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/MBSTech-sol/sdk-python"
+Repository = "https://github.com/MBSTech-sol/python"
 Homepage = "https://mbsworkbench.com"
 Documentation = "https://github.com/MBSTech-sol/docs"
 
