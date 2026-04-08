@@ -1,6 +1,9 @@
 # mbs-python — Python SDK for MBS Workbench
 
-Official async Python client for [MBS Workbench](https://github.com/MBSTech-sol/MBS-Workbench).
+[![PyPI](https://img.shields.io/pypi/v/mbs-python?color=lime&label=pypi)](https://pypi.org/project/mbs-python/)
+[![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+Official async Python client for [MBS Workbench](https://mbsworkbench.com).
 Connects to a running `mbsd` daemon or any OpenAI-compatible server.
 
 ## Installation
